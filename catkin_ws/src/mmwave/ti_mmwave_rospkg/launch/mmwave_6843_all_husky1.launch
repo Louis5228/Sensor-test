@@ -1,0 +1,36 @@
+<?xml version="1.0" ?>
+<launch>
+  <arg name="veh" default="husky1" />
+
+  <group ns="$(arg veh)">
+  
+    <!-- <include file="$(find ti_mmwave_rospkg)/launch/multi_6843_0.launch">
+      <arg name="serial" value="00789E23" />
+      <arg name="veh" value="$(arg veh)" />
+    </include>
+
+    <include file="$(find ti_mmwave_rospkg)/launch/multi_6843_1.launch">
+      <arg name="serial" value="00789D64" />
+      <arg name="veh" value="$(arg veh)" />
+    </include>
+
+    <include file="$(find ti_mmwave_rospkg)/launch/multi_6843_2.launch">
+      <arg name="serial" value="00789B56" />
+      <arg name="veh" value="$(arg veh)" />
+    </include>
+
+    <include file="$(find ti_mmwave_rospkg)/launch/multi_6843_3.launch">
+      <arg name="serial" value="00789BBF" />
+      <arg name="veh" value="$(arg veh)" />
+    </include> -->
+    
+    <!-- mapping -->
+    <node name="mmwave_mapping" pkg="ti_mmwave_rospkg" type="mmwave_mapping" output="screen" required="true"></node>
+
+    <!-- filter -->
+    <node name="mmwave_filter" pkg="mmwave_detection" type="simple_tracking_node" output="screen" required="true"></node>
+
+  </group>
+
+
+</launch>

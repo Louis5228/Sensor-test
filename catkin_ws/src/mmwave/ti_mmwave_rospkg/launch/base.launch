@@ -1,0 +1,3 @@
+<launch>    
+    <node name="mmwave_mapping" pkg="ti_mmwave_rospkg" type="mmwave_mapping"  output="screen" required="true"></node>
+</launch>
