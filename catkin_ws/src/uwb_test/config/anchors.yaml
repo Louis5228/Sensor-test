@@ -1,0 +1,17 @@
+---
+anchors: #x, y, z are measured in mm
+    -       # should be at origin point
+        anchor_id: 0x6a0f
+        px: 0
+        py: 0
+        pz: 800
+    -       # defines x axis and y should be 0
+        anchor_id: 0x6a02
+        px: 1000
+        py: 0
+        pz: 800
+    -
+        anchor_id: 0x6a3c
+        px: 1000
+        py: 1000
+        pz: 800
